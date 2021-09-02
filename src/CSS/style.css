@@ -16,6 +16,7 @@
   height: 100vh;
   width: 10%;
   color: white;
+  height: 100vh;
 }
 
 .wrapper .navBar ul {
@@ -64,18 +65,23 @@
       -ms-flex-pack: center;
           justify-content: center;
   padding: 10px;
+  height: 90vh;
+  overflow-y: scroll;
 }
 
 .wrapper .mainBody .tables table {
   width: 100%;
 }
 
-.wrapper .mainBody .tables table tr th, .wrapper .mainBody .tables table tr td {
+.wrapper .mainBody .tables table tr th {
   color: white;
   padding: 5px 0;
+  font-size: 24px;
 }
 
 .wrapper .mainBody .tables table tr td {
+  color: white;
+  padding: 5px 0;
   text-align: center;
 }
 
