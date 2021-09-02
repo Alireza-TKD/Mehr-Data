@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  outline: none;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wrapper .navBar {
+  background-color: #1f1b24;
+  height: 100vh;
+  width: 10%;
+  color: white;
+}
+
+.wrapper .navBar ul {
+  height: 100%;
+}
+
+.wrapper .navBar ul li {
+  text-align: center;
+  font-size: 22px;
+  cursor: pointer;
+  line-height: 40px;
+}
+
+.wrapper .navBar ul li img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 60%;
+  height: 60%;
+}
+
+.wrapper .navBar ul li:nth-child(n + 2):hover {
+  background-color: #6d9773;
+}
+
+.wrapper .mainBody {
+  width: 90%;
+  background-color: #3c4043;
+}
+
+.wrapper .mainBody .searchBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px 0;
+  background-color: #1f1b24;
+}
+
+.wrapper .mainBody .tables {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px;
+}
+
+.wrapper .mainBody .tables table {
+  width: 100%;
+}
+
+.wrapper .mainBody .tables table tr th, .wrapper .mainBody .tables table tr td {
+  color: white;
+  padding: 5px 0;
+}
+
+.wrapper .mainBody .tables table tr td {
+  text-align: center;
+}
+
+.wrapper .mainBody .tables table tr:nth-child(even) {
+  background-color: #808588;
+}
+/*# sourceMappingURL=style.css.map */
