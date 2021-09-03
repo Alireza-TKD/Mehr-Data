@@ -3,12 +3,14 @@
   padding: 0;
   list-style: none;
   outline: none;
+  scroll-behavior: smooth;
 }
 
 .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 100vh;
 }
 
 .wrapper .navBar {
@@ -19,26 +21,58 @@
   height: 100vh;
 }
 
-.wrapper .navBar ul {
-  height: 100%;
+.wrapper .navBar input[type="checkbox"] {
+  display: none;
 }
 
-.wrapper .navBar ul li {
+.wrapper .navBar input[type="checkbox"]:checked ~ .dropChoices {
+  opacity: 1;
+  -webkit-transform: translatex(0px);
+          transform: translatex(0px);
+  display: block;
+}
+
+.wrapper .navBar .mainChoices li {
   text-align: center;
   font-size: 22px;
   cursor: pointer;
-  line-height: 40px;
+  line-height: 50px;
 }
 
-.wrapper .navBar ul li img {
+.wrapper .navBar .mainChoices li label {
+  display: block;
+  cursor: pointer;
+}
+
+.wrapper .navBar .mainChoices li img {
   -o-object-fit: contain;
      object-fit: contain;
   width: 60%;
   height: 60%;
 }
 
-.wrapper .navBar ul li:nth-child(n + 2):hover {
-  background-color: #6d9773;
+.wrapper .navBar .mainChoices li:nth-child(n + 2):hover {
+  background-color: #808588;
+}
+
+.wrapper .navBar .dropChoices {
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: translateX(1000px);
+          transform: translateX(1000px);
+  margin-top: 10px;
+}
+
+.wrapper .navBar .dropChoices li {
+  text-align: right;
+  font-size: 20px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.wrapper .navBar .dropChoices li:hover {
+  background-color: #808588;
 }
 
 .wrapper .mainBody {
@@ -57,13 +91,31 @@
   background-color: #1f1b24;
 }
 
+.wrapper .mainBody .searchBar input[type="text"] {
+  background-color: inherit;
+  width: 150px;
+  height: 30px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+  border-radius: 0;
+  font-size: 24px;
+  color: white;
+  font-family: Arial, FontAwesome;
+  -webkit-transition: 1s;
+  transition: 1s;
+  cursor: pointer;
+}
+
+.wrapper .mainBody .searchBar input[type="text"]:focus {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  width: 300px;
+  border-bottom: 1px white solid;
+  cursor: text;
+}
+
 .wrapper .mainBody .tables {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   padding: 10px;
   height: 90vh;
   overflow-y: scroll;
@@ -83,6 +135,11 @@
   color: white;
   padding: 5px 0;
   text-align: center;
+}
+
+.wrapper .mainBody .tables table tr td a {
+  color: white;
+  text-decoration: none;
 }
 
 .wrapper .mainBody .tables table tr:nth-child(even) {

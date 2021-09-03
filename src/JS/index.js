@@ -14,4 +14,17 @@ class DataGetter {
     }
 }
 
-const phoneData = new DataGetter('phones.html')
+const phoneData = new DataGetter('phones.html');
+const domainData = new DataGetter('domains.html');
+
+
+
+const search = () => {
+    let rows = document.querySelectorAll('.row');
+    let searchInp = document.getElementById('searchInp');
+
+    rows.forEach(item => {
+        item.innerHTML.indexOf(searchInp.value) > -1 ? item.style.display = '' : item.style.display = 'none';
+    })
+
+}

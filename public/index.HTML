@@ -6,27 +6,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../src/CSS/style.css">
+    <link rel="icon" href="../src/assets/Logo-favicon.png">
     <title>IT department</title>
 </head>
 
 <body>
     <div class="wrapper">
         <nav class="navBar">
-            <ul>
+            <input type="checkbox" id="dropDown">
+            <ul class="mainChoices">
                 <li><a href="#"><img src="../src/assets/Logo-favicon.png" alt=""></a></li>
-                <li onclick="phoneData.getTable()">تلفن</li>
-                <li>فناوری اطلاعات</li>
+                <li onclick="phoneData.getTable()">همکاران</li>
+                <li>
+                    <label for="dropDown">فناوری اطلاعات</label>
+                </li>
+            </ul>
+            <ul class="dropChoices">
+                <li onclick="domainData.getTable()">دامین</li>
+                <li>موجودی</li>
             </ul>
         </nav>
         <div class="mainBody">
             <nav class="searchBar">
-                <input type="text" class="searchInp">
+                <input type="text" id="searchInp" onkeyup="search()" placeholder="&#xF002 جست و جو">
             </nav>
             <div class="tables" id="tableContainer">
             </div>
         </div>
     </div>
     <script src="../src/JS/index.js"></script>
+    <script src="https://kit.fontawesome.com/8f7b76a403.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

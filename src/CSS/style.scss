@@ -1,0 +1,125 @@
+$NavFontColor: white;
+$padding: 10px;
+$fontSize: 22px;
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  outline: none;
+  scroll-behavior: smooth;
+}
+
+.wrapper {
+  display: flex;
+  height: 100vh;
+  .navBar {
+    background-color: #1f1b24;
+    height: 100vh;
+    width: 10%;
+    color: $NavFontColor;
+    height: 100vh;
+    input[type="checkbox"] {
+      display: none;
+    }
+    input[type="checkbox"]:checked ~ .dropChoices {
+      opacity: 1;
+      transform: translatex(0px);
+      display: block;
+    }
+    .mainChoices {
+      li {
+        text-align: center;
+        font-size: $fontSize;
+        cursor: pointer;
+        line-height: 50px;
+        label {
+          display: block;
+          cursor: pointer;
+        }
+        img {
+          object-fit: contain;
+          width: 60%;
+          height: 60%;
+        }
+      }
+      li:nth-child(n + 2) {
+        &:hover {
+          background-color: #808588;
+        }
+      }
+    }
+    .dropChoices {
+      opacity: 0;
+      transition: 0.3s;
+      transform: translateX(1000px);
+      margin-top: 10px;
+      li {
+        text-align: right;
+        font-size: 20px;
+        padding: 5px;
+        cursor: pointer;
+        &:hover {
+          background-color: #808588;
+        }
+      }
+    }
+  }
+
+  .mainBody {
+    width: 90%;
+    background-color: #3c4043;
+    .searchBar {
+      display: flex;
+      justify-content: center;
+      padding: $padding 0;
+      background-color: #1f1b24;
+      input[type="text"] {
+        background-color: inherit;
+        width: 150px;
+        height: 30px;
+        box-shadow: none;
+        border: none;
+        border-radius: 0;
+        font-size: 24px;
+        color: $NavFontColor;
+        font-family: Arial, FontAwesome;
+        transition: 1s;
+        cursor: pointer;
+      }
+      input[type="text"]:focus {
+        transform: scale(1.5);
+        width: 300px;
+        border-bottom: 1px white solid;
+        cursor: text;
+      }
+    }
+    .tables {
+      padding: 10px;
+      height: 90vh;
+      overflow-y: scroll;
+      table {
+        width: 100%;
+        tr {
+          th {
+            color: $NavFontColor;
+            padding: 5px 0;
+            font-size: 24px;
+          }
+          td {
+            color: $NavFontColor;
+            padding: 5px 0;
+            text-align: center;
+            a {
+              color: $NavFontColor;
+              text-decoration: none;
+            }
+          }
+        }
+        tr:nth-child(even) {
+          background-color: #808588;
+        }
+      }
+    }
+  }
+}
