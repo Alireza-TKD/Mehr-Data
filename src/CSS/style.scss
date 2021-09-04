@@ -10,6 +10,10 @@ $fontSize: 22px;
   scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar-track {
+  background-color: red;
+}
+
 .wrapper {
   display: flex;
   height: 100vh;
@@ -23,7 +27,7 @@ $fontSize: 22px;
       display: none;
     }
     input[type="checkbox"]:checked ~ .dropChoices {
-      opacity: 1;
+      visibility: visible;
       transform: translatex(0px);
       display: block;
     }
@@ -50,7 +54,7 @@ $fontSize: 22px;
       }
     }
     .dropChoices {
-      opacity: 0;
+      visibility: hidden;
       transition: 0.3s;
       transform: translateX(1000px);
       margin-top: 10px;
