@@ -28,3 +28,13 @@ const search = () => {
     })
 
 }
+
+const excelReport = () => {
+    let data = document.getElementById('tableContainer');
+    TableToExcel.convert(data , {
+        name : 'data.xlsx',
+        sheet : {
+            name : 'sheet1'
+        },
+    });
+};
