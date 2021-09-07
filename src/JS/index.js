@@ -16,6 +16,7 @@ class DataGetter {
 
 const phoneData = new DataGetter('phones.html');
 const domainData = new DataGetter('domains.html');
+const getData = new DataGetter('commands.html');
 
 
 
