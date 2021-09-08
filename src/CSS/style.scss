@@ -64,6 +64,12 @@ $fontSize: 22px;
         }
       }
     }
+    .accessories{
+      display: flex;
+      position: relative;
+      bottom:-400px;
+      justify-content: center;
+    }
   }
 
   .mainBody {

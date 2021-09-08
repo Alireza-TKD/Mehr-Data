@@ -75,6 +75,17 @@
   background-color: #808588;
 }
 
+.wrapper .navBar .accessories {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  bottom: -400px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .wrapper .mainBody {
   width: 90%;
   background-color: #3c4043;
