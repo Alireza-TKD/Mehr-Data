@@ -39,3 +39,26 @@ const excelReport = () => {
         },
     });
 };
+
+class Theme {
+    constructor(condition){
+        this.condition = condition;
+    }
+    changer(){
+        const links = document.getElementsByTagName('link');
+        const toggler = document.getElementById('toggler')
+        if(this.condition){
+            this.condition = false;
+            links[0].removeAttribute('href');
+            links[0].setAttribute('href','../src/CSS/light.css')
+            toggler.style.transform = 'translateX(-40px)'
+        }else{
+            this.condition = true;
+            links[0].removeAttribute('href');
+            links[0].setAttribute('href', '../src/CSS/dark.css')
+            toggler.style.transform = 'translateX(0)'
+        }
+    }
+}
+
+const themeChanger = new Theme(true)

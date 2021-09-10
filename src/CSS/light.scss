@@ -1,0 +1,176 @@
+$NavFontColor: black;
+$padding: 10px;
+$fontSize: 22px;
+
+@mixin buttons {
+  background-color: #3e3f67;
+  border-radius: 7px;
+  color: $NavFontColor;
+  padding: 10px;
+  margin: 3px;
+  border: none;
+  box-shadow: 2px 2px 5px 3px #000;
+  cursor: pointer;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  outline: none;
+  scroll-behavior: smooth;
+}
+
+.wrapper {
+  display: flex;
+  height: 100vh;
+  .navBar {
+    background-color: #b1c1c6;
+    height: 100vh;
+    width: 10%;
+    color: $NavFontColor;
+    height: 100vh;
+    input[type="checkbox"] {
+      display: none;
+    }
+    input[type="checkbox"]:checked ~ .dropChoices {
+      visibility: visible;
+      transform: translatex(0px);
+      display: block;
+    }
+    .mainChoices {
+      li {
+        text-align: center;
+        font-size: $fontSize;
+        cursor: pointer;
+        line-height: 50px;
+        label {
+          display: block;
+          cursor: pointer;
+        }
+        img {
+          object-fit: contain;
+          width: 60%;
+          height: 60%;
+        }
+      }
+      li:nth-child(n + 2) {
+        &:hover {
+          background-color: #808588;
+        }
+      }
+    }
+    .dropChoices {
+      visibility: hidden;
+      transition: 0.3s;
+      transform: translateX(1000px);
+      margin-top: 10px;
+      li {
+        text-align: right;
+        font-size: 24px;
+        padding: 10px;
+        cursor: pointer;
+        &:hover {
+          background-color: #808588;
+        }
+      }
+    }
+    .accessories {
+      position: relative;
+      top: 40%;
+      text-align: center;
+      button {
+        @include buttons;
+        margin-bottom: 10px;
+      }
+      .buttonWrapper {
+        width: 70px;
+        height: 30px;
+        padding: 3px;
+        border: 2px solid black;
+        border-radius: 30px;
+        display: inline-block;
+        .buttonToggler {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          background-color: #4b00a3;
+          cursor: pointer;
+          transition: 1s;
+        }
+      }
+    }
+  }
+
+  .mainBody {
+    width: 90%;
+    background-color: #ebeaed;
+    .searchBar {
+      display: flex;
+      justify-content: center;
+      padding: $padding 0;
+      background-color: #b1c1c6;
+      input[type="text"] {
+        background-color: inherit;
+        width: 150px;
+        height: 30px;
+        border: none;
+        border-radius: 0;
+        font-size: 24px;
+        color: $NavFontColor;
+        font-family: Arial, FontAwesome;
+      }
+    }
+    .tables {
+      padding: 10px;
+      height: 90vh;
+      overflow-y: scroll;
+      .welcomBox {
+        width: 60%;
+        height: 30vh;
+        display: flex;
+        justify-content: center;
+        background: #b1c1c6;
+        align-items: center;
+        margin-left: 50%;
+        margin-right: 20%;
+        margin-top: 15%;
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px 5px #353636;
+        .welcomText {
+          h1 {
+            font-size: 42px;
+            text-align: center;
+            padding: 10px;
+          }
+          h2 {
+            text-align: center;
+            padding: 10px;
+          }
+        }
+      }
+      table {
+        width: 100%;
+        tr {
+          th {
+            color: $NavFontColor;
+            padding: 5px 0;
+            font-size: 24px;
+          }
+          td {
+            color: $NavFontColor;
+            padding: 5px 0;
+            text-align: center;
+            a {
+              color: $NavFontColor;
+              text-decoration: none;
+            }
+          }
+        }
+        tr:nth-child(even) {
+          background-color: #808588;
+        }
+      }
+    }
+  }
+}
