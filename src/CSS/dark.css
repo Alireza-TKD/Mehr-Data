@@ -109,8 +109,6 @@
   border-radius: 50%;
   background-color: #4b00a3;
   cursor: pointer;
-  -webkit-transition: 1s;
-  transition: 1s;
 }
 
 .wrapper .mainBody {
