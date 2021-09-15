@@ -19,7 +19,6 @@ const domainData = new DataGetter('domains.html');
 const getData = new DataGetter('commands.html');
 
 
-
 const search = () => {
     let rows = document.querySelectorAll('.row');
     let searchInp = document.getElementById('searchInp');

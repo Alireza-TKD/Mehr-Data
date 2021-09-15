@@ -3,7 +3,7 @@ $padding: 10px;
 $fontSize: 22px;
 
 @mixin buttons {
-  background-color: #3e3f67;
+  background-color: #b1c1c6;
   border-radius: 7px;
   color: $NavFontColor;
   padding: 10px;
@@ -167,7 +167,7 @@ $fontSize: 22px;
           }
         }
         tr:nth-child(even) {
-          background-color: #808588;
+          background-color: #b1c1c6;
         }
       }
     }

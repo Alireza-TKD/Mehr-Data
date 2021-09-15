@@ -82,7 +82,7 @@
 }
 
 .wrapper .navBar .accessories button {
-  background-color: #3e3f67;
+  background-color: #b1c1c6;
   border-radius: 7px;
   color: black;
   padding: 10px;
@@ -198,6 +198,6 @@
 }
 
 .wrapper .mainBody .tables table tr:nth-child(even) {
-  background-color: #808588;
+  background-color: #b1c1c6;
 }
 /*# sourceMappingURL=light.css.map */
