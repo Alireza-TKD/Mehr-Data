@@ -2,15 +2,14 @@ class DataGetter {
     constructor(file){
         this.file = file;
     }
-    getTable(){
-        const xhttp = new XMLHttpRequest;
+    async getTable(){
         const elem = document.getElementById('tableContainer');
-        xhttp.open('GET',`${this.file}`,true);
-        xhttp.send();
-        xhttp.onload = () => {
-           elem.innerHTML = xhttp.responseText;
+        
+        const page = await fetch(`${this.file}`);
+        const res = await page.text();
+        elem.innerHTML = res;
 
-        }
+        document.getElementById('searchInp').style.display = 'block'
     }
 }
 
@@ -24,7 +23,7 @@ const search = () => {
     let searchInp = document.getElementById('searchInp');
 
     rows.forEach(item => {
-        item.innerHTML.indexOf(searchInp.value) > -1 ? item.style.display = '' : item.style.display = 'none';
+        item.innerHTML.toUpperCase().indexOf(searchInp.value.toUpperCase()) > -1 ? item.style.display = '' : item.style.display = 'none';
     })
 
 }

@@ -123,14 +123,15 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 10px 0;
   background-color: #b1c1c6;
 }
 
 .wrapper .mainBody .searchBar input[type="text"] {
+  display: none;
   background-color: inherit;
   width: 150px;
   height: 30px;
+  margin: 10px 0;
   border: none;
   border-radius: 0;
   font-size: 24px;
