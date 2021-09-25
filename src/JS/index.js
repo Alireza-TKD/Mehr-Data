@@ -60,3 +60,9 @@ class Theme {
 }
 
 const themeChanger = new Theme(true)
+
+//copy values
+const copyText = text => {
+    document.execCommand('copy');
+    alert(`${text.innerHTML} کپی شد`)
+}

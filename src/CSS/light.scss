@@ -161,6 +161,7 @@ $fontSize: 22px;
             color: $NavFontColor;
             padding: 5px 0;
             text-align: center;
+            user-select: all;
             a {
               color: $NavFontColor;
               text-decoration: none;
