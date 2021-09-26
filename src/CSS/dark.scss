@@ -82,6 +82,7 @@ $fontSize: 22px;
       button {
         @include buttons;
         margin-bottom: 10px;
+        display: none;
       }
       .buttonWrapper {
         width: 70px;

@@ -92,6 +92,7 @@
           box-shadow: 2px 2px 5px 3px #000;
   cursor: pointer;
   margin-bottom: 10px;
+  display: none;
 }
 
 .wrapper .navBar .accessories .buttonWrapper {

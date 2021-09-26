@@ -10,6 +10,7 @@ class DataGetter {
         elem.innerHTML = res;
 
         document.getElementById('searchInp').style.display = 'block'
+        document.getElementById('excButton').style.display= 'inline-block'
     }
 }
 
