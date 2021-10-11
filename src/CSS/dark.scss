@@ -2,6 +2,14 @@ $NavFontColor: white;
 $padding: 10px;
 $fontSize: 22px;
 
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  outline: none;
+  scroll-behavior: smooth;
+}
+
 @mixin buttons {
   background-color: #3e3f67;
   border-radius: 7px;
@@ -13,12 +21,9 @@ $fontSize: 22px;
   cursor: pointer;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  outline: none;
-  scroll-behavior: smooth;
+@font-face {
+  font-family: 'Byekan';
+  src: url(../assets/BYekan+.ttf);
 }
 
 .wrapper {
@@ -157,12 +162,14 @@ $fontSize: 22px;
             color: $NavFontColor;
             padding: 5px 0;
             font-size: 24px;
+            font-family: Byekan;
           }
           td {
             color: $NavFontColor;
             padding: 5px 0;
             text-align: center;
             user-select: all;
+            font-family: Byekan;
             a {
               color: $NavFontColor;
               text-decoration: none;

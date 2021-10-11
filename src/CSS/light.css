@@ -6,6 +6,11 @@
   scroll-behavior: smooth;
 }
 
+@font-face {
+  font-family: 'Byekan';
+  src: url(../assets/BYekan+.ttf);
+}
+
 .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -186,6 +191,7 @@
   color: black;
   padding: 5px 0;
   font-size: 24px;
+  font-family: Byekan;
 }
 
 .wrapper .mainBody .tables table tr td {
@@ -196,6 +202,7 @@
      -moz-user-select: all;
       -ms-user-select: all;
           user-select: all;
+  font-family: Byekan;
 }
 
 .wrapper .mainBody .tables table tr td a {
