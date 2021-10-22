@@ -8,7 +8,14 @@ $fontSize: 22px;
   list-style: none;
   outline: none;
   scroll-behavior: smooth;
+  font-family: Byekan;
+  text-decoration: none;
 }
+
+::-webkit-scrollbar{
+  display: none;
+}
+
 
 @mixin buttons {
   background-color: #3e3f67;
@@ -29,34 +36,43 @@ $fontSize: 22px;
 .wrapper {
   display: flex;
   height: 100vh;
+  @media screen and (max-width : 576px) {
+    display: block;
+  }
   .navBar {
     background-color: #1f1b24;
     height: 100vh;
     width: 10%;
     color: $NavFontColor;
     height: 100vh;
-    input[type="checkbox"] {
-      display: none;
-    }
-    input[type="checkbox"]:checked ~ .dropChoices {
-      visibility: visible;
-      transform: translatex(0px);
-      display: block;
+    @media screen and (max-width : 576px){
+      display: flex;
+      height: 10vh;
+      width: 100%;
+      align-content: center;
     }
     .mainChoices {
+      @media screen and (max-width : 576px) {
+        display: flex;
+        padding: 5px;
+      }
       li {
         text-align: center;
         font-size: $fontSize;
         cursor: pointer;
         line-height: 50px;
-        label {
-          display: block;
-          cursor: pointer;
+        @media screen and (max-width : 576px) {
+          margin: 0 5px;
+          font-size: 16px;
         }
         img {
           object-fit: contain;
           width: 60%;
           height: 60%;
+          @media screen and (max-width : 576px) {
+            width: 40px;
+            height: 40px;
+          }
         }
       }
       li:nth-child(n + 2) {
@@ -65,43 +81,52 @@ $fontSize: 22px;
         }
       }
     }
-    .dropChoices {
-      visibility: hidden;
-      transition: 0.3s;
-      transform: translateX(1000px);
-      margin-top: 10px;
-      li {
-        text-align: right;
-        font-size: 24px;
-        padding: 10px;
-        cursor: pointer;
-        &:hover {
-          background-color: #808588;
-        }
-      }
-    }
     .accessories {
       position: relative;
-      top: 40%;
+      top: 60%;
       text-align: center;
+      @media screen and (max-width : 576px) {
+        position: static;
+        margin: 0 70px 0 0;
+        display: flex;
+        align-items: center;
+      }
       button {
         @include buttons;
         margin-bottom: 10px;
-        display: none;
+        visibility: hidden;
+        @media screen and (max-width : 480px) {
+          padding: 5px;
+          font-size: 12px;
+        }
+      }
+      i{
+        @media screen and (max-width : 480px) {
+          font-size: 12px;
+        }
       }
       .buttonWrapper {
+        display: inline-block;
         width: 70px;
         height: 30px;
         padding: 3px;
         border: 2px solid white;
         border-radius: 30px;
-        display: inline-block;
+        @media screen and (max-width : 576px) {
+          width: 40px;
+          height: 25px;
+          padding: 5px 5px;
+        }
         .buttonToggler {
           width: 30px;
           height: 30px;
           border-radius: 50%;
           background-color: #4b00a3;
           cursor: pointer;
+          @media screen and (max-width : 576px) {
+            width: 25px;
+            height: 25px;
+          }
         }
       }
     }
@@ -110,6 +135,9 @@ $fontSize: 22px;
   .mainBody {
     width: 90%;
     background-color: #3c4043;
+    @media screen and (max-width : 576px) {
+      width: 100%;
+    }
     .searchBar {
       display: flex;
       justify-content: center;
@@ -131,27 +159,44 @@ $fontSize: 22px;
       padding: 10px;
       height: 90vh;
       overflow-y: scroll;
-      .welcomBox {
-        width: 60%;
-        height: 30vh;
+      -ms-overflow-style: none;
+      .main{
+        height: 100vh;
         display: flex;
         justify-content: center;
-        background: #808588;
         align-items: center;
-        margin-left: 50%;
-        margin-right: 20%;
-        margin-top: 15%;
-        border-radius: 10px;
-        box-shadow: 5px 5px 5px 5px #353636;
-        .welcomText {
-          h1 {
-            font-size: 42px;
-            text-align: center;
-            padding: 10px;
+        .mainBox{
+          width : 60%;
+          @media screen and (max-width : 576px) {
+            width: 100%;
           }
-          h2 {
+          .introduction{
+            padding: 30px;
             text-align: center;
-            padding: 10px;
+            h2{
+              color: $NavFontColor;
+            }
+          }
+          .links{
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            row-gap: 20px;
+            text-align: center;
+          }
+          .link{
+            &:hover{
+             transform: scale(1.5);
+             transition: 0.2s linear;
+            }
+            a{
+              color: $NavFontColor;
+            }
+            img{
+              width: 40px;
+              height: 40px;
+              image-rendering: pixelated;
+              object-fit: contain;
+            }
           }
         }
       }
@@ -162,17 +207,14 @@ $fontSize: 22px;
             color: $NavFontColor;
             padding: 5px 0;
             font-size: 24px;
-            font-family: Byekan;
           }
           td {
             color: $NavFontColor;
             padding: 5px 0;
             text-align: center;
             user-select: all;
-            font-family: Byekan;
             a {
               color: $NavFontColor;
-              text-decoration: none;
             }
           }
         }

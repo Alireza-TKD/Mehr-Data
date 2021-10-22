@@ -13,17 +13,9 @@
 <body>
     <div class="wrapper">
         <nav class="navBar">
-            <input type="checkbox" id="dropDown">
             <ul class="mainChoices">
-                <li><a href="#"><img src="../src/assets/Logo-favicon.png" alt=""></a></li>
-                <li onclick="phoneData.getTable()">همکاران</li>
-                <li>
-                    <label for="dropDown">فناوری اطلاعات</label>
-                </li>
-            </ul>
-            <ul class="dropChoices">
-                <li onclick="domainData.getTable()">سامانه ها </li>
-                <li onclick="getData.getTable()">اطلاعات</li>
+                <li title="صفحه اصلی"><img onclick="getMain.getTable()" src="../src/assets/Logo-favicon.png" alt="Mehr-Logo"></li>
+                <li onclick="phoneData.getTable()">داخلی همکاران</li>
             </ul>
             <ul class="accessories">
                 <li><button id="excButton" onclick="excelReport()">خروجی اکسل</button></li>
@@ -41,16 +33,10 @@
                 <input type="text" id="searchInp" onkeyup="search()" placeholder="&#xF002 جست و جو">
             </nav>
             <div class="tables" id="tableContainer">
-                <div class="welcomBox">
-                    <div class="welcomText">
-                        <h1>به دیتا سنتر مهرآفرین خوش آمدید</h1>
-                        <h2>دسترسی به اطلاعات در کمترین زمان ممکن!</h2>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
-    <script src="../src/JS/index.js"></script>
+    <script src="../src/JS/index.js" defer></script>
     <script src="https://kit.fontawesome.com/8f7b76a403.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/gh/linways/table-to-excel@v1.0.4/dist/tableToExcel.js"></script>
 

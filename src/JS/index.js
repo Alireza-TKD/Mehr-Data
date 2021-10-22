@@ -9,14 +9,18 @@ class DataGetter {
         const res = await page.text();
         elem.innerHTML = res;
 
-        document.getElementById('searchInp').style.display = 'block'
-        document.getElementById('excButton').style.display= 'inline-block'
+        this.file == 'main.html' ? document.getElementById('searchInp').style.display = 'none' : document.getElementById('searchInp').style.display = 'block' 
+        this.file == 'main.html' ? document.getElementById('excButton').style.visibility= 'hidden' : document.getElementById('excButton').style.visibility= 'visible'
     }
 }
 
 const phoneData = new DataGetter('phones.html');
 const domainData = new DataGetter('domains.html');
 const getData = new DataGetter('commands.html');
+const getMain = new DataGetter('main.html');
+
+//for main page
+getMain.getTable()
 
 
 const search = () => {
@@ -34,7 +38,7 @@ const excelReport = () => {
     TableToExcel.convert(data , {
         name : 'data.xlsx',
         sheet : {
-            name : 'sheet1'
+            name : 'phones'
         },
     });
 };
