@@ -163,8 +163,15 @@ $fontSize: 22px;
       .main{
         height: 100vh;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
+        .updates{
+          align-self: flex-start;
+          h3{
+            color: $NavFontColor;
+          }
+        }
         .mainBox{
           width : 60%;
           @media screen and (max-width : 576px) {
