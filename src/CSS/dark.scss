@@ -10,6 +10,7 @@ $fontSize: 22px;
   scroll-behavior: smooth;
   font-family: Byekan;
   text-decoration: none;
+  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar{
@@ -191,9 +192,9 @@ $fontSize: 22px;
             text-align: center;
           }
           .link{
+            transition:transform 0.2s linear;
             &:hover{
-             transform: scale(1.5);
-             transition: 0.2s linear;
+             transform: translateY(-5px);
             }
             a{
               color: $NavFontColor;

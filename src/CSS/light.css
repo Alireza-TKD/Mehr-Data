@@ -6,6 +6,7 @@
   scroll-behavior: smooth;
   font-family: Byekan;
   text-decoration: none;
+  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
@@ -214,12 +215,21 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.wrapper .mainBody .tables .main .updates {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 .wrapper .mainBody .tables .main .mainBox {
@@ -250,11 +260,16 @@
   text-align: center;
 }
 
+.wrapper .mainBody .tables .main .mainBox .link {
+  -webkit-transition: -webkit-transform 0.2s linear;
+  transition: -webkit-transform 0.2s linear;
+  transition: transform 0.2s linear;
+  transition: transform 0.2s linear, -webkit-transform 0.2s linear;
+}
+
 .wrapper .mainBody .tables .main .mainBox .link:hover {
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
-  -webkit-transition: 0.2s linear;
-  transition: 0.2s linear;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
 }
 
 .wrapper .mainBody .tables .main .mainBox .link a {
