@@ -204,6 +204,23 @@
   font-family: Arial, FontAwesome;
 }
 
+.wrapper .mainBody .goTop {
+  position: fixed;
+  bottom: 40px;
+  right: 200px;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  background-color: #6F6369;
+  border-radius: 50%;
+  opacity: 0;
+  font-weight: bold;
+  font-size: 22px;
+  outline: none;
+  text-align: center;
+  cursor: pointer;
+}
+
 .wrapper .mainBody .tables {
   padding: 10px;
   height: 90vh;

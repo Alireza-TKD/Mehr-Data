@@ -11,6 +11,7 @@ class DataGetter {
 
         this.file == 'main.html' ? document.getElementById('searchInp').style.display = 'none' : document.getElementById('searchInp').style.display = 'block' 
         this.file == 'main.html' ? document.getElementById('excButton').style.visibility= 'hidden' : document.getElementById('excButton').style.visibility= 'visible'
+        document.getElementById('searchInp').value = ''
     }
 }
 
@@ -66,8 +67,3 @@ class Theme {
 
 const themeChanger = new Theme(true)
 
-//copy values
-const copyText = text => {
-    document.execCommand('copy');
-    alert(`${text.innerHTML} کپی شد`)
-}
