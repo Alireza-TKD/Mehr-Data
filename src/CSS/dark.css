@@ -147,27 +147,12 @@
   border-radius: 30px;
 }
 
-@media screen and (max-width: 576px) {
-  .wrapper .navBar .accessories .buttonWrapper {
-    width: 40px;
-    height: 25px;
-    padding: 5px 5px;
-  }
-}
-
 .wrapper .navBar .accessories .buttonWrapper .buttonToggler {
   width: 30px;
   height: 30px;
   border-radius: 50%;
   background-color: #4b00a3;
   cursor: pointer;
-}
-
-@media screen and (max-width: 576px) {
-  .wrapper .navBar .accessories .buttonWrapper .buttonToggler {
-    width: 25px;
-    height: 25px;
-  }
 }
 
 .wrapper .mainBody {
