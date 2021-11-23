@@ -9,16 +9,14 @@ class DataGetter {
         const res = await page.text();
         elem.innerHTML = res;
 
-        this.file == 'main.html' ? document.getElementById('searchInp').style.display = 'none' : document.getElementById('searchInp').style.display = 'block' 
-        this.file == 'main.html' ? document.getElementById('excButton').style.visibility= 'hidden' : document.getElementById('excButton').style.visibility= 'visible'
+        this.file == 'public/main.html' ? document.getElementById('searchInp').style.display = 'none' : document.getElementById('searchInp').style.display = 'block' 
+        this.file == 'public/main.html' ? document.getElementById('excButton').style.visibility= 'hidden' : document.getElementById('excButton').style.visibility= 'visible'
         document.getElementById('searchInp').value = ''
     }
 }
 
-const phoneData = new DataGetter('phones.html');
-const domainData = new DataGetter('domains.html');
-const getData = new DataGetter('commands.html');
-const getMain = new DataGetter('main.html');
+const phoneData = new DataGetter('public/phones.html');
+const getMain = new DataGetter('public/main.html');
 
 //for main page
 getMain.getTable()
@@ -55,7 +53,7 @@ class Theme {
             this.condition = false;
             links[0].removeAttribute('href');
             links[0].setAttribute('href','../src/CSS/light.css')
-            toggler.style.transform = 'translateX(-40px)'
+            toggler.style.transform = 'translateX(-29px)'
         }else{
             this.condition = true;
             links[0].removeAttribute('href');
