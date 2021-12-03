@@ -138,6 +138,7 @@
   }
 }
 
+<<<<<<< HEAD
 .wrapper .navBar .accessories .theme {
   padding: 15px;
   background-color: #05005b;
@@ -160,6 +161,25 @@
   }
 }
 
+=======
+.wrapper .navBar .accessories .buttonWrapper {
+  width: 60px;
+  height: 30px;
+  padding: 3px;
+  border: 2px solid black;
+  border-radius: 30px;
+  display: inline-block;
+}
+
+.wrapper .navBar .accessories .buttonWrapper .buttonToggler {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #4b00a3;
+  cursor: pointer;
+}
+
+>>>>>>> 8539132a5d7de98fa763381532440de6cd491247
 .wrapper .mainBody {
   width: 90%;
   background-color: #ebeaed;
