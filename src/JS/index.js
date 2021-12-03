@@ -50,17 +50,21 @@ class Theme {
     }
     changer(){
         const links = document.getElementsByTagName('link');
-        const toggler = document.getElementById('toggler')
+        const themeBtn = document.getElementById('themeBtn').firstChild;
         if(this.condition){
             this.condition = false;
             links[0].removeAttribute('href');
-            links[0].setAttribute('href','../src/CSS/light.css')
-            toggler.style.transform = 'translateX(-40px)'
+            links[0].setAttribute('href','../src/CSS/light.css');
+            themeBtn.classList.remove('fa-sun');
+            themeBtn.classList.add('fa-moon');
+            themeBtn.title = 'تم تیره';
         }else{
             this.condition = true;
             links[0].removeAttribute('href');
-            links[0].setAttribute('href', '../src/CSS/dark.css')
-            toggler.style.transform = 'translateX(0)'
+            links[0].setAttribute('href', '../src/CSS/dark.css');
+            themeBtn.classList.remove('fa-moon');
+            themeBtn.classList.add('fa-sun');
+            themeBtn.title = 'تم روشن';
         }
     }
 }

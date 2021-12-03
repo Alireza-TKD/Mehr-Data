@@ -90,7 +90,7 @@ $fontSize: 22px;
         display: flex;
         align-items: center;
       }
-      button {
+      #excButton {
         @include buttons;
         margin-bottom: 10px;
         visibility: hidden;
@@ -104,27 +104,20 @@ $fontSize: 22px;
           font-size: 12px;
         }
       }
-      .buttonWrapper {
-        width: 70px;
-        height: 30px;
-        padding: 3px;
-        border: 2px solid black;
-        border-radius: 30px;
-        display: inline-block;
-        @media screen and (max-width : 576px) {
-          width: 40px;
-          height: 25px;
-          padding: 5px 5px;
-        }
-        .buttonToggler {
-          width: 30px;
-          height: 30px;
-          border-radius: 50%;
-          background-color: #4b00a3;
-          cursor: pointer;
-          @media screen and (max-width : 576px) {
-            width: 25px;
-            height: 25px;
+      .theme{
+        padding: 15px;
+        background-color: #05005b;
+        color: white;
+        box-shadow: 1px 1px 8px 4px rgba(0,0,0,0.48);
+        -webkit-box-shadow: 1px 1px 8px 4px rgba(0,0,0,0.48);
+        -moz-box-shadow: 1px 1px 8px 4px rgba(0,0,0,0.48);
+        cursor: pointer;
+        border-radius: 50%;
+        border: none;
+        i{
+          font-size: 22px;
+          @media screen and (max-width : 480px) {
+            font-size: 12px;
           }
         }
       }
@@ -165,7 +158,30 @@ $fontSize: 22px;
         justify-content: center;
         align-items: center;
         .updates{
-          align-self: flex-start;
+          width: 60%;
+          background-color: #b1c1c6;
+          padding: 10px;
+          box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+          -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+          -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+          align-self: center;
+          border-radius: 20px;
+          h1{
+            color: $NavFontColor;
+            margin: 10px 0;
+          }
+         .details{
+           display: grid;
+           grid-template-columns: auto auto;
+           @media screen and (max-width : 480px) {
+             display: block;
+           }
+          h3{
+            color: $NavFontColor;
+            text-align: center;
+            margin: 0 10px;
+          }
+         }
         }
         .mainBox{
           width : 60%;

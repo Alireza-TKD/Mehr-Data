@@ -111,7 +111,7 @@
   }
 }
 
-.wrapper .navBar .accessories button {
+.wrapper .navBar .accessories #excButton {
   background-color: #3e3f67;
   border-radius: 7px;
   color: white;
@@ -126,14 +126,31 @@
 }
 
 @media screen and (max-width: 480px) {
-  .wrapper .navBar .accessories button {
+  .wrapper .navBar .accessories #excButton {
+    color: white;
     padding: 5px;
     font-size: 12px;
   }
 }
 
+.wrapper .navBar .accessories .theme {
+  padding: 15px;
+  background-color: #05005b;
+  color: white;
+  box-shadow: 1px 1px 8px 4px rgba(0, 0, 0, 0.48);
+  -webkit-box-shadow: 1px 1px 8px 4px rgba(0, 0, 0, 0.48);
+  -moz-box-shadow: 1px 1px 8px 4px rgba(0, 0, 0, 0.48);
+  cursor: pointer;
+  border-radius: 50%;
+  border: none;
+}
+
+.wrapper .navBar .accessories .theme i {
+  font-size: 22px;
+}
+
 @media screen and (max-width: 480px) {
-  .wrapper .navBar .accessories i {
+  .wrapper .navBar .accessories .theme i {
     font-size: 12px;
   }
 }
@@ -204,23 +221,6 @@
   font-family: Arial, FontAwesome;
 }
 
-.wrapper .mainBody .goTop {
-  position: fixed;
-  bottom: 40px;
-  right: 200px;
-  width: 50px;
-  height: 50px;
-  padding: 10px;
-  background-color: #6F6369;
-  border-radius: 50%;
-  opacity: 0;
-  font-weight: bold;
-  font-size: 22px;
-  outline: none;
-  text-align: center;
-  cursor: pointer;
-}
-
 .wrapper .mainBody .tables {
   padding: 10px;
   height: 90vh;
@@ -246,12 +246,40 @@
 }
 
 .wrapper .mainBody .tables .main .updates {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+  width: 60%;
+  background-color: #1f1b24;
+  padding: 10px;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  border-radius: 20px;
 }
 
-.wrapper .mainBody .tables .main .updates h3 {
+.wrapper .mainBody .tables .main .updates h1 {
   color: white;
+  margin: 10px 0;
+}
+
+.wrapper .mainBody .tables .main .updates .details {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+}
+
+@media screen and (max-width: 480px) {
+  .wrapper .mainBody .tables .main .updates .details {
+    display: block;
+  }
+}
+
+.wrapper .mainBody .tables .main .updates .details h3 {
+  color: white;
+  text-align: center;
+  margin: 0 10px;
 }
 
 .wrapper .mainBody .tables .main .mainBox {

@@ -111,7 +111,7 @@
   }
 }
 
-.wrapper .navBar .accessories button {
+.wrapper .navBar .accessories #excButton {
   background-color: #b1c1c6;
   border-radius: 7px;
   color: black;
@@ -126,7 +126,7 @@
 }
 
 @media screen and (max-width: 480px) {
-  .wrapper .navBar .accessories button {
+  .wrapper .navBar .accessories #excButton {
     padding: 5px;
     font-size: 12px;
   }
@@ -138,35 +138,25 @@
   }
 }
 
-.wrapper .navBar .accessories .buttonWrapper {
-  width: 70px;
-  height: 30px;
-  padding: 3px;
-  border: 2px solid black;
-  border-radius: 30px;
-  display: inline-block;
-}
-
-@media screen and (max-width: 576px) {
-  .wrapper .navBar .accessories .buttonWrapper {
-    width: 40px;
-    height: 25px;
-    padding: 5px 5px;
-  }
-}
-
-.wrapper .navBar .accessories .buttonWrapper .buttonToggler {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: #4b00a3;
+.wrapper .navBar .accessories .theme {
+  padding: 15px;
+  background-color: #05005b;
+  color: white;
+  box-shadow: 1px 1px 8px 4px rgba(0, 0, 0, 0.48);
+  -webkit-box-shadow: 1px 1px 8px 4px rgba(0, 0, 0, 0.48);
+  -moz-box-shadow: 1px 1px 8px 4px rgba(0, 0, 0, 0.48);
   cursor: pointer;
+  border-radius: 50%;
+  border: none;
 }
 
-@media screen and (max-width: 576px) {
-  .wrapper .navBar .accessories .buttonWrapper .buttonToggler {
-    width: 25px;
-    height: 25px;
+.wrapper .navBar .accessories .theme i {
+  font-size: 22px;
+}
+
+@media screen and (max-width: 480px) {
+  .wrapper .navBar .accessories .theme i {
+    font-size: 12px;
   }
 }
 
@@ -228,8 +218,40 @@
 }
 
 .wrapper .mainBody .tables .main .updates {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+  width: 60%;
+  background-color: #b1c1c6;
+  padding: 10px;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  border-radius: 20px;
+}
+
+.wrapper .mainBody .tables .main .updates h1 {
+  color: black;
+  margin: 10px 0;
+}
+
+.wrapper .mainBody .tables .main .updates .details {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+}
+
+@media screen and (max-width: 480px) {
+  .wrapper .mainBody .tables .main .updates .details {
+    display: block;
+  }
+}
+
+.wrapper .mainBody .tables .main .updates .details h3 {
+  color: black;
+  text-align: center;
+  margin: 0 10px;
 }
 
 .wrapper .mainBody .tables .main .mainBox {
