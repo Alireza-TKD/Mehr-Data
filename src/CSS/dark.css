@@ -137,6 +137,8 @@
   padding: 15px;
   background-color: #05005b;
   color: white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   box-shadow: 1px 1px 8px 4px rgba(0, 0, 0, 0.48);
   -webkit-box-shadow: 1px 1px 8px 4px rgba(0, 0, 0, 0.48);
   -moz-box-shadow: 1px 1px 8px 4px rgba(0, 0, 0, 0.48);
@@ -155,25 +157,9 @@
   }
 }
 
-.wrapper .navBar .accessories .buttonWrapper {
-  display: inline-block;
-  width: 60px;
-  height: 30px;
-  padding: 3px;
-  border: 2px solid white;
-  border-radius: 30px;
-}
-
-.wrapper .navBar .accessories .buttonWrapper .buttonToggler {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: #4b00a3;
-  cursor: pointer;
-}
-
 .wrapper .mainBody {
   width: 90%;
+  overflow-y: hidden;
   background-color: #3c4043;
 }
 
@@ -193,7 +179,7 @@
   background-color: #1f1b24;
 }
 
-.wrapper .mainBody .searchBar input[type="text"] {
+.wrapper .mainBody .searchBar .searchInp {
   display: none;
   background-color: inherit;
   width: 150px;
@@ -208,7 +194,7 @@
 
 .wrapper .mainBody .tables {
   padding: 10px;
-  height: 90vh;
+  height: 100vh;
   overflow-y: scroll;
   -ms-overflow-style: none;
 }

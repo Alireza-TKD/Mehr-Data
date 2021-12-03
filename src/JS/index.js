@@ -52,15 +52,10 @@ class Theme {
         if(this.condition){
             this.condition = false;
             links[0].removeAttribute('href');
-<<<<<<< HEAD
             links[0].setAttribute('href','../src/CSS/light.css');
             themeBtn.classList.remove('fa-sun');
             themeBtn.classList.add('fa-moon');
             themeBtn.title = 'تم تیره';
-=======
-            links[0].setAttribute('href','../src/CSS/light.css')
-            toggler.style.transform = 'translateX(-29px)'
->>>>>>> 8539132a5d7de98fa763381532440de6cd491247
         }else{
             this.condition = true;
             links[0].removeAttribute('href');
