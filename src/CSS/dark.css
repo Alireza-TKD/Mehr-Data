@@ -229,6 +229,12 @@
   border-radius: 20px;
 }
 
+@media screen and (max-width: 1520px) {
+  .wrapper .mainBody .tables .main .updates {
+    width: 80%;
+  }
+}
+
 .wrapper .mainBody .tables .main .updates h1 {
   color: white;
   margin: 10px 0;
@@ -241,7 +247,7 @@
       grid-template-columns: auto auto;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 1520px) {
   .wrapper .mainBody .tables .main .updates .details {
     display: block;
   }

@@ -167,6 +167,9 @@ $fontSize: 22px;
           -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
           align-self: center;
           border-radius: 20px;
+          @media screen and (max-width : 1520px) {
+            width: 80%;
+          }
           h1{
             color: $NavFontColor;
             margin: 10px 0;
@@ -174,7 +177,7 @@ $fontSize: 22px;
          .details{
            display: grid;
            grid-template-columns: auto auto;
-           @media screen and (max-width : 576px) {
+           @media screen and (max-width : 1520px) {
             display: block;
           }
           h3{
