@@ -173,7 +173,7 @@ $fontSize: 22px;
          .details{
            display: grid;
            grid-template-columns: auto auto;
-           @media screen and (max-width : 480px) {
+           @media screen and (max-width : 576px) {
              display: block;
            }
           h3{
