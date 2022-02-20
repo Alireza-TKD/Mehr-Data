@@ -16,6 +16,7 @@ class DataGetter {
 }
 
 const phoneData = new DataGetter('public/phones.html');
+const branchData = new DataGetter('public/branchers.html');
 const getMain = new DataGetter('public/main.html');
 
 //for main page
@@ -23,7 +24,7 @@ getMain.getTable()
 
 
 const search = () => {
-    let rows = document.querySelectorAll('.row');
+    let rows = document.querySelectorAll('.rows');
     let searchInp = document.getElementById('searchInp');
 
     rows.forEach(item => {
@@ -68,4 +69,3 @@ class Theme {
 }
 
 const themeChanger = new Theme(true)
-
