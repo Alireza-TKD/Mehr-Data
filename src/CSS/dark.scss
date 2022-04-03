@@ -18,9 +18,9 @@ $fontSize: 22px;
 }
 
 @mixin buttons {
-  background-color: #3e3f67;
+  background-color: #FFA000;
   border-radius: 7px;
-  color: $NavFontColor;
+  color: black;
   padding: 10px;
   margin: 3px;
   border: none;
@@ -52,12 +52,15 @@ $fontSize: 22px;
       align-content: center;
     }
     .mainChoices {
+      padding: 0;
       @media screen and (max-width : 576px) {
         display: flex;
         padding: 5px;
+        justify-content: center;
       }
       li {
         text-align: center;
+        display: block;
         font-size: $fontSize;
         cursor: pointer;
         line-height: 50px;
@@ -67,6 +70,7 @@ $fontSize: 22px;
         }
         img {
           object-fit: contain;
+          margin:10px 0;
           width: 60%;
           height: 60%;
           @media screen and (max-width : 576px) {
@@ -83,7 +87,7 @@ $fontSize: 22px;
     }
     .accessories {
       position: relative;
-      top: 60%;
+      top: 55%;
       text-align: center;
       @media screen and (max-width : 576px) {
         position: static;
@@ -148,7 +152,7 @@ $fontSize: 22px;
    }
     .tables {
       padding: 10px;
-      height: 100vh;
+      height: 95vh;
       overflow-y: scroll;
       -ms-overflow-style: none;
       .main{
@@ -157,35 +161,6 @@ $fontSize: 22px;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        .updates{
-          width: 60%;
-          background-color: #1f1b24;
-          padding: 10px;
-          box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-          -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-          -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-          align-self: center;
-          border-radius: 20px;
-          @media screen and (max-width : 1520px) {
-            width: 80%;
-          }
-          h1{
-            color: $NavFontColor;
-            margin: 10px 0;
-          }
-         .details{
-           display: grid;
-           grid-template-columns: auto auto;
-           @media screen and (max-width : 1520px) {
-             display: block;
-           }
-          h3{
-            color: $NavFontColor;
-            text-align: center;
-            margin: 0 10px;
-          }
-         }
-        }
         .mainBox{
           width : 60%;
           @media screen and (max-width : 576px) {
@@ -219,6 +194,12 @@ $fontSize: 22px;
               object-fit: contain;
             }
           }
+          .link:nth-child(13){
+            grid-column: 1 / span 2;
+          }
+          .link:nth-child(14){
+            grid-column: 3 / span 2;
+          }
         }
       }
       table {
@@ -228,6 +209,7 @@ $fontSize: 22px;
             color: $NavFontColor;
             padding: 5px 0;
             font-size: 24px;
+            text-align: center;
           }
           td {
             color: $NavFontColor;
@@ -245,4 +227,9 @@ $fontSize: 22px;
       }
     }
   }
+}
+
+//alert design
+.swal2-confirm{
+  color: #000 !important;
 }
