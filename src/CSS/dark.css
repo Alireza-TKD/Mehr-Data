@@ -37,6 +37,7 @@
   width: 10%;
   color: white;
   height: 100vh;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 576px) {
@@ -78,7 +79,7 @@
 @media screen and (max-width: 576px) {
   .wrapper .navBar .mainChoices li {
     margin: 0 5px;
-    font-size: 16px;
+    font-size: 12px;
   }
 }
 
@@ -105,6 +106,19 @@
   position: relative;
   top: 55%;
   text-align: center;
+}
+
+@media screen and (max-width: 992px) {
+  .wrapper .navBar .accessories {
+    top: 40%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper .navBar .accessories {
+    top: 50%;
+    font-size: 12px;
+  }
 }
 
 @media screen and (max-width: 576px) {
