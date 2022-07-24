@@ -1,6 +1,6 @@
 Swal.fire({
     title: `اطلاعیه ها`,
-    html:'همکار جدید'+'\xa0\xa0\xa0\xa0\xa0\xa0\xa0'+'خانم ملکی'+'\xa0\xa0\xa0\xa0\xa0\xa0\xa0'+ 'فناوری اطلاعات'+'\xa0\xa0\xa0\xa0\xa0\xa0\xa0'+'702' +'<br>'+'همکار جدید'+'\xa0\xa0\xa0\xa0\xa0\xa0\xa0'+'آقای هرندی'+'\xa0\xa0\xa0\xa0\xa0\xa0\xa0'+ 'بورس انرژی'+'\xa0\xa0\xa0\xa0\xa0\xa0\xa0'+'424' +'<br>'+'همکار جدید'+'\xa0\xa0\xa0\xa0\xa0\xa0\xa0'+'آقای آزادی'+'\xa0\xa0\xa0\xa0\xa0\xa0\xa0'+ 'معاملات کالا'+'\xa0\xa0\xa0\xa0\xa0\xa0\xa0'+'425' +'<br>',
+    html:'شماره های دفتر تجریش صرافی کاردان به شرح ذیل می باشد : '+'<br>'+'<br>'+ 22759648 +'<br>' + '<br>' + 22759513 + '<br>'+ '<br>' + 22734556 + '<br>' + '<br>' + 22759873 ,
     confirmButtonText: 'بستن',  
     confirmButtonColor : '#FFA000',
-  })
+  });
