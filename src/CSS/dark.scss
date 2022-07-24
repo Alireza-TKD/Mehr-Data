@@ -45,6 +45,7 @@ $fontSize: 22px;
     width: 10%;
     color: $NavFontColor;
     height: 100vh;
+    overflow: hidden;
     @media screen and (max-width : 576px){
       display: flex;
       height: 10vh;
@@ -66,7 +67,7 @@ $fontSize: 22px;
         line-height: 50px;
         @media screen and (max-width : 576px) {
           margin: 0 5px;
-          font-size: 16px;
+          font-size: 12px;
         }
         img {
           object-fit: contain;
@@ -89,6 +90,13 @@ $fontSize: 22px;
       position: relative;
       top: 55%;
       text-align: center;
+      @media screen and (max-width : 992px) {
+        top: 40%;
+      }
+      @media screen and (max-width : 768px){
+        top: 50%;
+        font-size: 12px;
+      }
       @media screen and (max-width : 576px) {
         position: static;
         margin: 0 70px 0 0;

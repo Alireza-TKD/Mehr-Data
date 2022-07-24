@@ -11,7 +11,7 @@ class DataGetter {
 
         this.file == 'public/main.html' ? document.getElementById('searchInp').style.display = 'none' : document.getElementById('searchInp').style.display = 'block' 
         this.file == 'public/main.html' ? document.getElementById('excButton').style.visibility= 'hidden' : document.getElementById('excButton').style.visibility= 'visible'
-        document.getElementById('searchInp').value = ''
+        document.getElementById('searchInp').value = '';
     }
 }
 
